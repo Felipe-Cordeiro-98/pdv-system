@@ -15,6 +15,22 @@ public class Product {
     private Integer stockQuantity = 0;
     private Integer lowStockThreshold;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
+
+    public Product() {
+    }
+
+    public Product(Long id, String name, String description, Double price, Integer stockQuantity, Integer lowStockThreshold, Category category) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+        this.lowStockThreshold = lowStockThreshold;
+        this.category = category;
+    }
 
     public Long getId() {
         return id;
