@@ -16,3 +16,15 @@ INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_thre
 INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Cerveja Skol Lata', 'Cerveja Skol 350ml', 6.00, 30, 5, 3);
 INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Batata Frita', 'Porção de batata frita 300g', 12.00, 10, 2, 4);
 INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Suco Natural de Laranja', 'Copo de suco natural de laranja', 7.00, 15, 3, 2);
+
+-- Inserindo uma venda com método de pagamento
+INSERT INTO tb_sale (date, total_amount, payment_method_id) VALUES ('2025-01-09 14:30:00', 50.00, 1);
+INSERT INTO tb_sale (date, total_amount, payment_method_id) VALUES ('2025-01-09 15:00:00', 75.00, 2);
+
+-- Inserindo itens da venda
+INSERT INTO tb_sale_item (quantity, price, subtotal, product_id, sale_id) VALUES (2, 5.00, 10.00, 1, 1);
+INSERT INTO tb_sale_item (quantity, price, subtotal, product_id, sale_id) VALUES (4, 10.00, 40.00, 2, 1);
+INSERT INTO tb_sale_item (quantity, price, subtotal, product_id, sale_id) VALUES (1, 25.00, 25.00, 3, 2);
+INSERT INTO tb_sale_item (quantity, price, subtotal, product_id, sale_id) VALUES (2, 25.00, 50.00, 4, 2);
+
+
