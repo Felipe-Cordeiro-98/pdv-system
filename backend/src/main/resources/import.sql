@@ -11,11 +11,11 @@ INSERT INTO tb_payment_method (name) VALUES ('Cartão de Débito');
 INSERT INTO tb_payment_method (name) VALUES ('PIX');
 
 -- Inserindo produtos na tabela tb_product
-INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Pastel de Carne', 'Pastel recheado com carne moída', 5.00, 20, 5, 1);
-INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Coca-Cola Lata', 'Refrigerante Coca-Cola 350ml', 4.50, 50, 10, 2);
-INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Cerveja Skol Lata', 'Cerveja Skol 350ml', 6.00, 30, 5, 3);
-INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Batata Frita', 'Porção de batata frita 300g', 12.00, 10, 2, 4);
-INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, category_id) VALUES ('Suco Natural de Laranja', 'Copo de suco natural de laranja', 7.00, 15, 3, 2);
+INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, active, category_id) VALUES ('Pastel de Carne', 'Pastel recheado com carne moída', 5.00, 20, 5, true, 1);
+INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, active, category_id) VALUES ('Coca-Cola Lata', 'Refrigerante Coca-Cola 350ml', 4.50, 50, 10, true, 2);
+INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, active, category_id) VALUES ('Cerveja Skol Lata', 'Cerveja Skol 350ml', 6.00, 30, 5, true, 3);
+INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, active, category_id) VALUES ('Batata Frita', 'Porção de batata frita 300g', 12.00, 10, 2, true, 4);
+INSERT INTO tb_product (name, description, price, stock_quantity, low_stock_threshold, active, category_id) VALUES ('Suco Natural de Laranja', 'Copo de suco natural de laranja', 7.00, 15, 3, true, 2);
 
 -- Inserindo uma venda com método de pagamento
 INSERT INTO tb_sale (date, total_amount, payment_method_id) VALUES ('2025-01-09 14:30:00', 50.00, 1);

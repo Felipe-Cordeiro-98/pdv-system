@@ -14,6 +14,7 @@ public class Product {
     private Double price;
     private Integer stockQuantity = 0;
     private Integer lowStockThreshold;
+    private Boolean active = true;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
@@ -22,7 +23,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, String description, Double price, Integer stockQuantity, Integer lowStockThreshold, Category category) {
+    public Product(Long id, String name, String description, Double price, Integer stockQuantity, Integer lowStockThreshold, Category category, Boolean active) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -30,6 +31,7 @@ public class Product {
         this.stockQuantity = stockQuantity;
         this.lowStockThreshold = lowStockThreshold;
         this.category = category;
+        this.active = active;
     }
 
     public Long getId() {
@@ -78,6 +80,22 @@ public class Product {
 
     public void setLowStockThreshold(Integer lowStockThreshold) {
         this.lowStockThreshold = lowStockThreshold;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public void adjustStock(int quantity) {
