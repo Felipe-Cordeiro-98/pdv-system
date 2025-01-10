@@ -1,0 +1,30 @@
+.sidebar-aside {
+    width: 250px;
+    min-width: 250px;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #cccccc28;
+    background-color: #191A19;
+}
+
+.card-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    font-size: 1.3rem;
+}
+
+.sidebar-link {
+    display: flex;
+    gap: 13px;
+    padding: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar-link:hover {
+    background-color: #2C2C2C;
+}
