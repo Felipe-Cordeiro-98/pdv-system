@@ -1,9 +1,9 @@
 package com.felipecordeiro.pdv.repositories;
 
-import com.felipecordeiro.pdv.models.Sale;
+import com.felipecordeiro.pdv.models.PaymentMethod;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SaleRepository extends JpaRepository<Sale, Long> {
+public interface PaymentMethodRepository extends JpaRepository<PaymentMethod, Long> {
 }
