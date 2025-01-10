@@ -76,4 +76,8 @@ public class Sale {
         }
         return sum;
     }
+
+    public void addSaleItems(SaleItem item) {
+        this.saleItems.add(item);
+    }
 }

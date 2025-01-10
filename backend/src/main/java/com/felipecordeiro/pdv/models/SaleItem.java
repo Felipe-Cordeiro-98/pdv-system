@@ -72,6 +72,14 @@ public class SaleItem {
         this.product = product;
     }
 
+    public Sale getSale() {
+        return sale;
+    }
+
+    public void setSale(Sale sale) {
+        this.sale = sale;
+    }
+
     public double calculateSubtotal() {
         return getPrice() * getQuantity();
     }
